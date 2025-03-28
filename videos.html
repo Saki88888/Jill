@@ -6,56 +6,30 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent;
-      overflow-x: hidden; /* 防止水平滾動 */
+      overflow-x: hidden;
     }
 
-    /* 外層容器，讓圖片和影片的排列垂直 */
-    .video-container {
-      display: flex;
-      flex-direction: column; /* 垂直排列 */
-      align-items: center;
-      gap: 10px;
-      padding: 10px;
-      overflow: hidden; /* 隱藏超出範圍的內容 */
-    }
-
-    .video-container img, .video-container video {
-      width: 100%;
-      height: auto; /* 高度自動調整，保持長寬比 */
-      max-width: 100%; /* 最大寬度為100% */
+    img, video {
+      max-width: 100%;
+      height: auto;
       display: block;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 100%; /* 確保iframe不超出容器 */
-      height: 1800px;
-      border: none;
-      margin: 1px;
-      padding: 1px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
+  <img src="https://saki88888.github.io/Plotly/IMG_7985.jpeg" alt="Image" />
 
-  <div class="video-container">
-    <!-- 圖片，寬高比例相同 -->
-    <img src="https://saki88888.github.io/Plotly/IMG_7985.jpeg" alt="Image" />
+  <video controls poster="./IMG_7981.jpeg">
+    <source src="https://saki88888.github.io/Plotly/01_learn.mp4" type="video/mp4">
+  </video>
 
-    <!-- 影片，寬高比例相同 -->
-    <video controls poster="./IMG_7981.jpeg">
-      <source src="https://saki88888.github.io/Plotly/01_learn.mp4" type="video/mp4">
-    </video>
+  <video controls poster="./IMG_7982.jpeg">
+    <source src="https://saki88888.github.io/Plotly/02_choice.mp4" type="video/mp4">
+  </video>
 
-    <video controls poster="./IMG_7982.jpeg">
-      <source src="https://saki88888.github.io/Plotly/02_choice.mp4" type="video/mp4">
-    </video>
-
-    <video controls poster="./IMG_7984.jpeg">
-      <source src="https://saki88888.github.io/Plotly/03_game.mp4" type="video/mp4">
-    </video>
-  </div>
-
+  <video controls poster="./IMG_7984.jpeg">
+    <source src="https://saki88888.github.io/Plotly/03_game.mp4" type="video/mp4">
+  </video>
 </body>
 </html>
