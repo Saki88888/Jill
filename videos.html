@@ -22,12 +22,28 @@
       height: auto;
       max-width: 480px; /* 設定最大寬度 */
       display: block;
+      flex-basis: 100%; /* 影片默認佔滿全寬 */
+    }
+
+    /* 為小螢幕設備調整 */
+    @media (min-width: 600px) {
+      video {
+        flex-basis: 48%; /* 中等螢幕顯示兩個影片並排 */
+      }
+    }
+
+    @media (min-width: 900px) {
+      video {
+        flex-basis: 31%; /* 大螢幕上顯示三個影片並排 */
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="video-container">
+    <img src="https://saki88888.github.io/Plotly/IMG_7985.jpeg" width="100%" height="auto" style="margin: 1; padding: 1; display: block;"/>
+
     <video controls poster="./IMG_7981.jpeg">
       <source src="https://saki88888.github.io/Plotly/01_learn.mp4" type="video/mp4">
     </video>
